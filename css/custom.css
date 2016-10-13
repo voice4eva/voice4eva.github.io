@@ -1,0 +1,33 @@
+body {
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+.img-pet {
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
+}
+.navbar-text>a {
+    color: inherit;
+    text-decoration: none;
+}
+div .col-md-4 {
+    padding-bottom: 40px;
+}
+.mainpic {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    background-image: url(../img/music_therapy_main.png);
+    height: 200px;
+}
+ol, ul {
+    padding: 5px;
+    list-style-type: none;
+    margin: 2px;
+}
+img.pull-left {
+    padding-right: 10px;
+}
+.jumbotron {
+    background-color: #5cb85c;
+}
