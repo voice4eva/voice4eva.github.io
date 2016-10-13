@@ -11,11 +11,14 @@
         <title>Voice4Eva</title>
 
         <!-- Bootstrap -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- Plugin CSS -->
+        <link rel="stylesheet" href="css/animate.css" type="text/css">
         <!-- Custom CSS -->
         <link href="css/custom.css" rel="stylesheet">
+
 
     </head>
     <body>
@@ -42,7 +45,7 @@
                             <a href="chanttherapeutique.html">Chant thérapeutique</a>
                         </li>
                         <li>
-                            <a href="#">Contact</a>
+                            <a href="#" data-toggle="modal" data-target="#contactModal">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -104,24 +107,96 @@
             </div>
         </div>
 
-        <!-- Modal -->
-        <div class="modal fade" id="contact" role="dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1>Contact</h1>
+        <!-- Contact Modal -->
+        <div class="modal fade" id="contactModal" role="dialog">
+          <div class="modal-dialog text-center">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Envoie-nous un message</h4>
+                  </div>
+                  <div class="modal-body">
+                    <form id="contactForm" data-toggle="validator" class="form-horizontal">
+                              <fieldset>
+                                <!-- Text input-->
+                                  <div class="form-group">
+                                      <div class="col-md-12">
+                                          <div class="input-group">
+                                              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                              <input id="name" name="name" placeholder="Nom et prénom" class="form-control" type="text">
+                                              <div class="help-block with-errors"></div>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <!-- Text input-->
+                                  <div class="form-group">
+
+                                      <div class="col-md-12">
+                                          <div class="input-group">
+                                              <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                              <input id="email" name="email" placeholder="exemple@domain.com" class="form-control" type="text">
+                                              <div class="help-block with-errors"></div>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <!-- Text input-->
+                                  <div class="form-group">
+                                      <div class="col-md-12">
+                                          <div class="input-group">
+                                              <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                                              <input id="phone" name="phone" placeholder="+1 (222) 333-4444" class="form-control" type="text">
+                                              <div class="help-block with-errors"></div>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <!-- Text input-->
+                                  <div class="form-group">
+                                      <div class="col-md-12 inputGroupContainer">
+                                          <div class="input-group">
+                                              <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                                              <textarea id="message" class="form-control" name="message" placeholder="Entrez votre message"></textarea>
+                                              <div class="help-block with-errors"></div>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <!-- Submit-->
+                                  <div class="form-group">
+                                      <div class="col-md-12">
+                                          <button id="form-submit" type="submit" class="btn btn-warning pull-right">Envoyer<span class="glyphicon glyphicon-send"></span></button>
+                                      </div>
+                                  </div>
+                                  <div id="msgSubmit" class="hidden"></div>
+                                  <div class="clearfix"></div>
+                              </fieldset>
+                          </form>
+                  </div>
+
                 </div>
-                <div class="modal-body">
-                    <p>Please send your inquiry to xxx@xxx.com</p>
-                </div>
-                <div class="modal-footer">
-                    <a class="btn btn-primary" data-dismiss="modal">Close</a>
-                </div>
+
+              </div>
             </div>
-        </div>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- Plugin JavaScript -->
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/jquery.fittext.js"></script>
+        <script src="js/wow.min.js"></script>
+
+
+
+        <!-- Validator JavaScript -->
+        <script src="js/validator.min.js"></script>
+
+        <!-- Contact Submit JavaScript -->
+        <script src="js/form-scripts.js"></script>
     </body>
 </html>
