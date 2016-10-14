@@ -1,13 +1,8 @@
-$("#contactForm").validator().on("submit", function (event) {
-    if (event.isDefaultPrevented()) {
-        // handle the invalid form...
-        formError();
-        submitMSG(false, "Avez-vous rempli le formulaire correctement?");
-    } else {
-        // everything looks good!
+$("#contactForm").submit(function (event) {
         event.preventDefault();
         submitForm();
-    }
+        $("#contactForm")[0].reset();
+        submitMSG(true, "Votre message a bien été envoyé! Merci. Nous vous contacterons bientôt.")
 });
 
 
@@ -21,34 +16,15 @@ function submitForm(){
     $.ajax({
         type: "POST",
         url: "http://singyourcreativity.com/php/form-process.php",
-        data: "name=" + name + "&email=" + email + "&phone=" + phone + "&message=" + message,
-        success : function(text){
-            if (text == "success"){
-                formSuccess();
-            } else {
-                formError();
-                submitMSG(false,text);
-            }
-        }
-    });
-}
-
-function formSuccess(){
-    $("#contactForm")[0].reset();
-    submitMSG(true, "Votre message a bien été envoyé! Merci. Nous vous contacterons bientôt.")
-}
-
-function formError(){
-    $("#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $(this).removeClass();
+        data: "name=" + name + "&email=" + email + "&phone=" + phone + "&message=" + message
     });
 }
 
 function submitMSG(valid, msg){
     if(valid){
-        var msgClasses = "alert alert-success text-center tada animated col-sm-10 col-sm-offset-2";
+        var msgClasses = "alert alert-success text-center tada animated";
     } else {
-        var msgClasses = "alert alert-danger text-center tada animated col-sm-10 col-sm-offset-2";
+        var msgClasses = "alert alert-danger text-center tada animated";
     }
     $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
 }
