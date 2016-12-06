@@ -19,12 +19,11 @@
     <link rel="stylesheet" href="css/animate.css" type="text/css">
     <!-- Custom CSS -->
     <link href="css/custom.css" rel="stylesheet">
-
 </head>
 
 <body>
     <!-- Navigator bar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-default" role="navigation">
 
         <div class="container">
             <div class="navbar-header">
@@ -54,8 +53,9 @@
 
     </div>
 
-    <!-- Jumbotron -->
+    <!-- Main body  -->
     <div class="container">
+        <!-- Jumbotron -->
         <div class="jumbotron text-center">
             <h1>Voice4Eva</h1>
             <p>
@@ -63,37 +63,82 @@
                 <br>
                 <i>~Eva Klirowska</i>
             </p>
-
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                <img class="img-thumbnail" src="img/SYC_logo.jpg" alt="Sing Your Creativity">
-                <h1>Sing Your Creativity</h1>
-                <p>Sing Your Creativity est un atelier interactif basé sur la musique et qui favorise le travail d'équipe et la créativité dans une atmosphère décontractée.
-                </p>
-                <a target="_blank" href="http://www.singyourcreativity.com/" class="btn btn-success btn-block">Aller</a>
+        <!-- Carousel -->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+
+                <div class="item active">
+                    <img src="img/SYC_main.jpg" alt="Sing Your Creativity" width="460" height="345">
+                    <div class="carousel-caption">
+                        <h1>Sing Your Creativity</h1>
+                        <p>Sing Your Creativity est un atelier interactif basé sur la musique et qui favorise le travail d'équipe et la créativité dans une atmosphère décontractée.</p>
+                        <a target="_blank" href="http://www.singyourcreativity.com/" class="btn btn-success btn-block">Aller</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/music_therapy_main_front.jpg" alt="Chant thérapeutique" width="460" height="345">
+                    <div class="carousel-caption">
+                        <h1>Chant thérapeutique</h1>
+                        <p>Cours personnalisés donnés à Monthey par une proffesseure de chant expérimentée, directrice de chorales et chanteuse professionnelle.</p>
+                        <a href="chanttherapeutique.html" class="btn btn-success btn-block">Aller</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/workshopmusictherapy.jpg" alt="Ateliers Se connecter par le chant" width="460" height="345">
+                    <div class="carousel-caption">
+                        <h1>Ateliers "Se connecter par le chant"</h1>
+                        <p>Les ateliers musicaux où j’accompagne les personnes qui ont envie de se reconnecter avec soi-même et avec les autres. Je les aide à trouver la confiance en soi pour pouvoir lâcher leurs blocages grâce au renforcement de leurs capacités
+                            physiques et psychologiques. Ceci se fait en utilisant le chant, la musique, le mouvement, la sophrologie, la méditation et les techniques améliorant la posture.</p>
+                        <a href="#" class="btn btn-success btn-block">Aller</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/karaoke_front.jpg" alt="Soirées Karaoké Live" width="460" height="345">
+                    <div class="carousel-caption">
+                        <h1>Soirées Karaoké Live</h1>
+                        <p>Chantez ensemble pendant vos soirées  et amusez-vous de la façon active, créative et originale! Choisissez votre répertoire parmi les chansons francophones et anglophones et passez des moments inoubliables en partage avec vos amis !</p>
+                        <a href="#" class="btn btn-success btn-block">Aller</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/concerts_front.jpg" alt="Concerts" width="460" height="345">
+                    <div class="carousel-caption">
+                        <h1>Concerts</h1>
+                        <p>L’animation de fêtes et d’événements. Voix et piano jazz et pop.</p>
+                        <a href="#" class="btn btn-success btn-block">Aller</a>
+                    </div>
+                </div>
+
             </div>
-            <div class="col-md-4">
-                <img class="img-thumbnail" src="img/music_therapy_logo.jpg" alt="Chant thérapeutique">
-                <h1>Chant thérapeutique</h1>
-                <p>
-                    Cours personnalisés donnés à Monthey par une proffesseure de chant expérimentée, directrice de chorales et chanteuse professionnelle.
-                </p>
-                <a href="chanttherapeutique.html" class="btn btn-success btn-block">Aller</a>
-            </div>
-            <div class="col-md-4">
-                <img class="img-thumbnail" src="img/workshopmusictherapy.png" alt="Ateliers Se connecter par le chant">
-                <h1>Ateliers "Se connecter par le chant"</h1>
-                <p>
-                    Les ateliers musicaux où j’accompagne les personnes qui ont envie de se reconnecter avec soi-même et avec les autres. Je les aide à trouver la confiance en soi pour pouvoir lâcher leurs blocages grâce au renforcement de leurs capacités physiques et psychologiques. Ceci se fait en utilisant le chant, la musique, le mouvement, la sophrologie, la méditation et les techniques améliorant la posture.
-                </p>
-                <a href="#" class="btn btn-success btn-block">Aller</a>
-            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </div>
 
     <!-- Footer -->
-    <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+    <div class="navbar navbar-inverse" role="navigation">
         <div class="container">
             <div class="navbar-text pull-left">
                 <p>
