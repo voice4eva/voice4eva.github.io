@@ -51,8 +51,3 @@ img.pull-left {
         display: none;
     }
 }
-
-/* Make images clickable in mobile mode */
-.image-click-mobile {
-        pointer:cursor;
-    }
