@@ -45,8 +45,14 @@ img.pull-left {
     background-image: none
 }
 
+/* Drop subtext in mobile mode */
 @media all and (max-width: 768px) {
-    .carcappar {
+    .carousel-caption-paragraph {
         display: none;
     }
 }
+
+/* Make images clickable in mobile mode */
+.image-click-mobile {
+        pointer:cursor;
+    }
