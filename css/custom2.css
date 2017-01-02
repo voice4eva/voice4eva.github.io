@@ -1,0 +1,47 @@
+/*!
+ * Below added by Sylvester Klirowski
+ */
+.bg-custom {
+  background: #FD9D52;
+  color: #fff;
+}
+
+.panel {
+    -webkit-box-shadow: 0 1px 1px transparent;
+    box-shadow: 0 1px 1px transparent;
+}
+.panel-body {
+  padding-top: 0px;
+
+}
+
+.panel > .panel-heading,
+.panel-default,
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+    background-image: none;
+    background-color: transparent;
+    border-color: transparent;
+
+}
+
+.panel-title > a {
+  text-decoration: none; /* no underline */
+}
+.panel-title > a > h3{
+  color: black;
+  display: inline;
+}
+
+.panel-title > a:active, a:hover > h3{
+  font-weight: bold;
+}
+
+.panel-body > h3, h4 {
+  color: black;
+}
+
+figcaption {
+  padding: 10px;
+  color: black;
+
+}
